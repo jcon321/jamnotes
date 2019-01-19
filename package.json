@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@expo/vector-icons": "^6.1.0",
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
@@ -20,11 +21,18 @@
     "redux-thunk": "^2.2.0",
     "redux-actions": "^2.2.1",
     "ramda": "^0.25.0",
-    "recompose": "^0.26.0"
+    "recompose": "^0.26.0",
+    "moment": "^2.19.1",
+    "uuid": "^3.1.0",
+    "react-redux": "^5.0.6",
+    "prop-types": "^15.6.0",
+    "react-native-elements": "^0.17.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "babel-preset-expo": "^5.0.0",
-    "jest-expo": "^32.0.0"
+    "jest-expo": "^32.0.0",
+    "remote-redux-devtools": "^0.5.12"
   },
   "private": true
 }

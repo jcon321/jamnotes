@@ -4,7 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import LibraryScreen from '../screens/LibraryScreen';
-import RecordScreen from '../screens/RecordScreen';
+import RecordScreenContainer from '../screens/RecordScreen';
 
 const LibraryStack = createStackNavigator({
   Library: LibraryScreen,
@@ -25,7 +25,7 @@ LibraryStack.navigationOptions = {
 };
 
 const RecordStack = createStackNavigator({
-  Records: RecordScreen,
+  Record: RecordScreenContainer,
 });
 
 RecordStack.navigationOptions = {
