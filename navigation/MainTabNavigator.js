@@ -3,15 +3,14 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import LibraryScreen from '../screens/LibraryScreen';
+import RecordScreen from '../screens/RecordScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+const LibraryStack = createStackNavigator({
+  Library: LibraryScreen,
 });
 
-HomeStack.navigationOptions = {
+LibraryStack.navigationOptions = {
   tabBarLabel: 'Library',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -25,11 +24,11 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const RecordStack = createStackNavigator({
+  Records: RecordScreen,
 });
 
-LinksStack.navigationOptions = {
+RecordStack.navigationOptions = {
   tabBarLabel: 'Record',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -43,6 +42,6 @@ LinksStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
+    LibraryStack,
+    RecordStack,
 });
