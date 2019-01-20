@@ -5,10 +5,9 @@ import { compose, withHandlers, withProps, onlyUpdateForKeys } from 'recompose';
 import moment from 'moment';
 import SwipeOut from 'react-native-swipeout';
 import { Feather } from '@expo/vector-icons';
-import { Icon } from '../../../../components';
 import { globalStyles } from '../../../../styles';
 import { durationToStr } from '../../../../utils/dateHelper';
-import { calendars } from '../../../../constants';
+import { calendars } from '../../../../constants/calendar';
 import s from './styles';
 
 const AudioItem = ({
