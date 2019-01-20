@@ -20,18 +20,21 @@ const mapDispatchToProps = {
 const enhancer = compose(
   connect(null, mapDispatchToProps),
   withHandlers({
-    setAudioMode: () => async ({ allowsRecordingIOS }) => {
-      try {
-        await Audio.setAudioModeAsync({
-          allowsRecordingIOS,
-          interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
-          playsInSilentModeIOS: true,
-          shouldDuckAndroid: true,
-          interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
-        });
-      } catch (error) {
-        console.log(error) // eslint-disable-line
-      }
+    setAudioMode: () => {
+        return async ({allowsRecordingIOS}) => {
+            try {
+                await Audio.setAudioModeAsync({
+                    allowsRecordingIOS,
+                    interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+                    playsInSilentModeIOS: true,
+                    shouldDuckAndroid: true,
+                    interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+                    playThroughEarpieceAndroid: true,
+                });
+            } catch (error) {
+                console.log(error) // eslint-disable-line
+            }
+        };
     },
   }),
   withStateHandlers({

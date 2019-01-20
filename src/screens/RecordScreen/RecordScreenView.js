@@ -58,22 +58,16 @@ const RecordScreen = ({
       <View style={s.container}>
 
         <View style={s.durationContainer}>
-          <Text style={s.recordingText}>Recording Audio</Text>
+          <Text style={s.recordingText}>Recording...</Text>
           <Text style={s.durationText}>
             {durationToStr(durationMillis)}
           </Text>
         </View>
 
         <TouchableOpacity
-          style={[s.recordButton, s.recordingBackground]}
+          style={s.endRecordButton}
           onPress={onEndRecording}
         >
-          <TabBarIcon
-            size={100}
-            color={colors.audio.recording}
-            name="stop"
-            style={[s.recordIcon]}
-          />
         </TouchableOpacity>
 
       </View>
@@ -83,18 +77,9 @@ const RecordScreen = ({
   return (
     <View style={s.container}>
       <TouchableOpacity
-        style={[s.recordButton, s.startRecordButton]}
+        style={s.recordButton}
         onPress={onStartRecording}
       >
-        <TabBarIcon
-          size={50}
-          color={colors.audio.startRecordingIcon}
-          name={Platform.OS === 'ios'
-              ? `ios-mic`
-              : `md-mic`
-          }
-          style={[s.recordIcon]}
-        />
       </TouchableOpacity>
     </View>
   );
