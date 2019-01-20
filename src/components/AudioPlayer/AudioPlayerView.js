@@ -7,7 +7,8 @@ import {
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { durationToStr } from '../../utils/dateHelper';
-import { Icon, RootSpinner, Slider } from '../';
+import Slider from '../Slider';
+import RootSpinner from '../RootSpinner';
 import styles from './styles';
 import { colors, dimensions } from '../../styles';
 

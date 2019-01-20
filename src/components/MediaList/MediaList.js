@@ -4,7 +4,8 @@ import R from 'ramda';
 import { FlatList } from 'react-native';
 import { pure } from 'recompose';
 import { globalStyles } from '../../styles';
-import { EmptyCover, Separator } from '../../components';
+import EmptyCover from '../EmptyCover';
+import Separator from '../Separator';
 
 const List = ({
   items,

@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 import { View } from 'react-native';
-import { globalStyles, headerStyle } from '../../styles';
+import { globalStyles } from '../../styles';
 import { MediaList, AudioPlayer } from '../../components';
 import { AudioItem } from './components';
 import s from './styles';
@@ -52,6 +52,10 @@ const LibraryScreenView = ({
   </View>
 );
 
+LibraryScreenView.navigationOptions = () => ({
+    header: null,
+});
+
 LibraryScreenView.propTypes = {
   audioItems: T.arrayOf(T.object),
   playingAudio: T.func,
@@ -67,13 +71,5 @@ LibraryScreenView.propTypes = {
   onStartSliding: T.func,
   showPlayer: T.bool,
 };
-
-LibraryScreenView.navigationOptions = ({ navigation }) => ({
-  headerTitle: (
-    <View></View>
-  ),
-  ...headerStyle,
-  title: 'Library',
-});
 
 export default LibraryScreenView;
