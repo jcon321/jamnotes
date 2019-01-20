@@ -3,11 +3,11 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import LibraryScreen from '../screens/LibraryScreen';
+import LibraryScreenContainer from '../screens/LibraryScreen';
 import RecordScreenContainer from '../screens/RecordScreen';
 
 const LibraryStack = createStackNavigator({
-  Library: LibraryScreen,
+  Library: LibraryScreenContainer,
 });
 
 LibraryStack.navigationOptions = {
