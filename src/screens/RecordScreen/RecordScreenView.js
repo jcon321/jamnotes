@@ -26,15 +26,17 @@ const RecordScreen = ({
           style={s.cancelCross}
         >
           <TabBarIcon
-            size={36}
-            color={colors.red}
-            name="md-close"
+            size={90}
+            name={Platform.OS === 'ios'
+                ? `ios-close`
+                : `md-close`
+            }
           />
         </TouchableOpacity>
 
         <TextInput
           style={s.inputStyle}
-          placeholder="Give a name for your audio"
+          placeholder="Give a name for your recording"
           value={audioName}
           onChangeText={setAudioName}
           underlineColorAndroid={colors.transparent}

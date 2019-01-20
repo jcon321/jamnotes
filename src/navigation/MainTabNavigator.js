@@ -15,6 +15,7 @@ LibraryStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
+      size={26}
       name={
         Platform.OS === 'ios'
           ? `ios-folder${focused ? '-open' : ''}`
@@ -33,6 +34,7 @@ RecordStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
+      size={26}
       name={Platform.OS === 'ios'
           ? `ios-mic${focused ? '' : ''}`
           : `md-mic${focused ? '' : ''}`

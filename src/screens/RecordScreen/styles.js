@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.white,
         alignItems: 'center',
+        marginTop: 100,
     },
     durationContainer: {
         flex: 1,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     cancelCross: {
         position: 'absolute',
         left: 15,
-        top: 24,
+        top: -20,
     },
     inputStyle: {
         marginTop: HEADER_HEIGHT,
