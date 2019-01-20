@@ -1,7 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
 import { View } from 'react-native';
-import { getParamOr } from '../../utils/navHelpers';
 import { globalStyles, headerStyle } from '../../styles';
 import { MediaList, AudioPlayer } from '../../components';
 import { AudioItem } from './components';
