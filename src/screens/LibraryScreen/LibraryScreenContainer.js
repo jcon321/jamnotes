@@ -5,8 +5,8 @@ import {
     compose,
     hoistStatics,
     withHandlers,
-    withState,
-    withPropsOnChange, withStateHandlers, lifecycle,
+    withStateHandlers,
+    lifecycle,
 } from 'recompose';
 import { audioSelectors, audioOperations } from '../../modules/audio';
 import LibraryScreenView from './LibraryScreenView';
@@ -139,11 +139,6 @@ const enhancer = compose(
             props.removeAudio(audioId);
         },
     }),
-    withState('selectedTabIndex', 'changeTab', 0),
-    withPropsOnChange(
-        ['selectedTabIndex'],
-        props => props.navigation.setParams({selectedTabIndex: props.selectedTabIndex}),
-    ),
     setParamsOnDidMount(props => ({
         changeTab: props.changeTab,
     })),
