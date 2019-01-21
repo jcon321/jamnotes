@@ -7,8 +7,9 @@ import SwipeOut from 'react-native-swipeout';
 import { Feather } from '@expo/vector-icons';
 import { globalStyles } from '../../../../styles';
 import { durationToStr } from '../../../../utils/dateHelper';
-import { calendars } from '../../../../constants/calendar';
+import calendars from '../../../../constants/calendar';
 import s from './styles';
+import TabBarIcon from '../../../../components/TabBarIcon';
 
 const AudioItem = ({
   item,
@@ -66,10 +67,9 @@ const AudioItem = ({
               {durationToStr(duration)}
             </Text>
 
-            <Icon
+            <TabBarIcon
               size={28}
-              IconSet={Feather}
-              iconName={isPlaying ? 'stop-circle' : 'play'}
+              name={isPlaying ? 'stop-circle' : 'md-play'}
               iconStyle={s.playIcon}
               color="#00a086"
             />

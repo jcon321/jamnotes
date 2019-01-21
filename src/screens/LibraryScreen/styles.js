@@ -4,6 +4,7 @@ import { colors, fontSizes } from '../../styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+      marginTop: 10,
   },
   tabsContainer: {
     margin: 16,

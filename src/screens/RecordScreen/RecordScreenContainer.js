@@ -9,9 +9,8 @@ import {
 } from 'recompose';
 import uuid from 'uuid';
 import moment from 'moment';
-import audioOperations from '../../modules/audio';
+import { audioOperations } from '../../modules/audio';
 import RecordScreenView from './RecordScreenView';
-import LibraryScreen from "../LibraryScreen";
 
 const mapDispatchToProps = {
   addAudio: audioOperations.addAudio,
@@ -118,7 +117,7 @@ const enhancer = compose(
           isDoneRecording: false,
         });
 
-        props.navigation.navigate(LibraryScreen);
+        props.navigation.navigate('Library');
       }
     },
     onCancelSave: props => () => {

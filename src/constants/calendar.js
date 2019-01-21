@@ -1,4 +1,4 @@
-export const recordDate = {
+export default recordDate = {
     sameDay: '[Today]',
     nextDay: '[Tomorrow]',
     nextWeek: 'dddd',
