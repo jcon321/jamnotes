@@ -38,7 +38,7 @@ const AudioPlayerView = ({
       >
         <TabBarIcon
           size={28}
-          iconName={isPlaying ? 'md-pause' : 'md-play'}
+          name={isPlaying ? 'md-pause' : 'md-play'}
           color={colors.white}
         />
       </TouchableOpacity>

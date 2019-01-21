@@ -24,7 +24,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   },
   "ios": {
     "infoPlist": {
