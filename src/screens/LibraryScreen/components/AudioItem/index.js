@@ -69,8 +69,7 @@ const AudioItem = ({
 
             <TabBarIcon
               size={28}
-              name={isPlaying ? 'stop-circle' : 'md-play'}
-              iconStyle={s.playIcon}
+              name={isPlaying ? 'md-square' : 'md-play'}
               color="#00a086"
             />
           </View>

@@ -73,7 +73,7 @@ const enhancer = compose(
                 props.playbackInstance().setOnPlaybackStatusUpdate(null);
                 props.setClassVariable({playbackInstance: null});
             }
-            const {sound} = await Audio.Sound.create(
+            const {sound} = await Audio.Sound.createAsync(
                 {uri: props.playingAudio().audioUrl},
                 {shouldPlay, position: 0, duration: 1, progressUpdateIntervalMillis: 50},
                 props.soundCallback,

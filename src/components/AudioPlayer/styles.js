@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: colors.transparent,
+    backgroundColor: colors.red,
   },
   playIcon: {
     marginLeft: 5,

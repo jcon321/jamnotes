@@ -5,12 +5,12 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 import { durationToStr } from '../../utils/dateHelper';
 import Slider from '../Slider';
 import RootSpinner from '../RootSpinner';
 import styles from './styles';
 import { colors, dimensions } from '../../styles';
+import TabBarIcon from "../TabBarIcon";
 
 const AudioPlayerView = ({
   title,
@@ -36,11 +36,9 @@ const AudioPlayerView = ({
         style={styles.button}
         onPress={onTogglePlaying}
       >
-        <Icon
+        <TabBarIcon
           size={28}
-          IconSet={Feather}
-          iconName={isPlaying ? 'pause' : 'play'}
-          iconStyle={styles.playIcon}
+          iconName={isPlaying ? 'md-pause' : 'md-play'}
           color={colors.white}
         />
       </TouchableOpacity>
